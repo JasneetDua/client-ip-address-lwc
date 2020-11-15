@@ -1,0 +1,64 @@
+<template>
+    <div class="info">
+        <h1 class="info__header">What is My IP</h1>
+        <div class="info__section">
+            <div class="info__section-desc">Internet Protocol version 4 (IPv4) is the fourth version of the Internet
+                Protocol (IP). It is one of the core protocols of standards-based internetworking methods in the
+                Internet and other packet-switched networks.</div>
+            <div class="ip-info">
+                <div class="ip-info__content-wrap">
+                    <div class="ip-info__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                            <path
+                                d="M432 64H144A144 144 0 0 0 0 208v208a32 32 0 0 0 32 32h512a32 32 0 0 0 32-32V208A144 144 0 0 0 432 64zM240 400H48V208a96 96 0 0 1 192 0zm288 0H288V208c0-37.05-14.38-70.48-37.37-96H432a96.1 96.1 0 0 1 96 96zm-64-208H344a8 8 0 0 0-8 8v32a8 8 0 0 0 8 8h72v32a16 16 0 0 0 16 16h32a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm-280 0h-80a8 8 0 0 0-8 8v48a8 8 0 0 0 8 8h80a8 8 0 0 0 8-8v-48a8 8 0 0 0-8-8z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="ip-info__content">
+                        <div class="ip-info__content-head">
+                            IPv4
+                        </div>
+                        <div class="ip-info__content-body">
+                            {ipv4}
+                        </div>
+                    </div>
+                </div>
+                <div class="ip-info__btn-wrap">
+                    <div class="ip-info__btn-tip" if:true={copied.ipv4}>Copied</div>
+                    <div class="ip-info__btn" data-name="ipv4" onclick={handleCopy}>Click To Copy</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info__section">
+            <div class="info__section-desc">
+                Internet Protocol version 6 (IPv6) is the most recent version of the Internet Protocol (IP), the
+                communications protocol that provides an identification and location system for computers on networks
+                and routes traffic across the Internet.
+            </div>
+            <div class="ip-info">
+                <div class="ip-info__content-wrap">
+                    <div class="ip-info__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path
+                                d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="ip-info__content">
+                        <div class="ip-info__content-head">
+                            IPv6
+                        </div>
+                        <div class="ip-info__content-body">
+                            {ipv6}
+                        </div>
+                    </div>
+                </div>
+                <div class="ip-info__btn-wrap">
+                    <div class="ip-info__btn-tip" if:true={copied.ipv6}>Copied</div>
+                    <div class="ip-info__btn" data-name="ipv6" onclick={handleCopy}>Click To Copy</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
